@@ -91,7 +91,31 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="right"></div>
+                        <div class="right">
+                            <div class="bloco_produtividade">
+                                <a class="icone_bloco" href="#">
+                                    <div>
+                                        <img src="assets/img/icons/office.png" alt="office">
+                                        <p>Office</p>
+                                    </div>
+                                </a>
+                                <a class="icone_bloco" href="#">
+                                    <div>
+                                        <img src="assets/img/icons/office.png" alt="office">
+                                        <p>Office</p>
+                                    </div>
+                                </a>
+                                <a class="icone_bloco" href="#">
+                                    <div>
+                                        <img src="assets/img/icons/office.png" alt="office">
+                                        <p>Office</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bloco_explorar">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--/dropdown-iniciar-->
