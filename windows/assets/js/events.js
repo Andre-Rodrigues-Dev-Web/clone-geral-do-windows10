@@ -1,20 +1,21 @@
 // Eventos de click botão direit
 const container = document.querySelector(".container");
+const clickRight = document.querySelector(".menu_right_clique");
 container.addEventListener("contextmenu", function (e) {
   e.preventDefault();
-  document.querySelector(".menu_right_clique").style.display = "block";
+  clickRight.style.display = "block";
   // pega a posição do mouse
-  document.querySelector(".menu_right_clique").style.left = e.pageX + "px";
-  document.querySelector(".menu_right_clique").style.top = e.pageY + "px";
+  clickRight.style.left = e.pageX + "px";
+  clickRight.style.top = e.pageY + "px";
 });
 container.addEventListener("click", function (e) {
   e.preventDefault();
   if (e.offsetX > 340) {
-    document.querySelector(".menu_right_clique").style.display = "none";
+    clickRight.style.display = "none";
   }
 });
 
-// Lista json de items
+// Lista de items
 const items = [
   {
     name: "Exibir"
@@ -44,12 +45,72 @@ items.forEach((item) => {
 });
 //Menu iniciar
 const menuIniciar = document.querySelector(".menu_windows__logo");
+const openMenu = document.querySelector(".menu_iniciar");
+
 menuIniciar.addEventListener("click", function (e) {
   e.preventDefault();
-  document.querySelector(".menu_iniciar").style.display = "block";
-  document.querySelector(".menu_iniciar").style.animation = "fadeIn 5s";
+  openMenu.style.display = "block";
+  openMenu.style.animation = "fadeIn 5s";
   menuIniciar.addEventListener("dblclick", function (e) {
     e.preventDefault();
-    document.querySelector(".menu_iniciar").style.display = "none";
+    openMenu.style.display = "none";
+  });
+});
+//Eventos Janela Chrome
+const chrome = document.querySelector(".chrome");
+const fechaChrome = document.querySelector(".fecha_chrome");
+const maximizarChrome = document.querySelector(".maximizar_chrome");
+const minimizarChrome = document.querySelector(".minimizar_chrome");
+const janelaChrome = document.querySelector(".janela");
+
+chrome.addEventListener("click", function (e) {
+  e.preventDefault();
+  janelaChrome.style.display = "block";
+});
+
+fechaChrome.addEventListener("click", function (e) {
+  e.preventDefault();
+  janelaChrome.style.display = "none";
+});
+
+maximizarChrome.addEventListener("click", function (e) {
+  e.preventDefault();
+  janelaChrome.style.width = "100%";
+  janelaChrome.style.height = "100%";
+  janelaChrome.style.top = "0";
+  janelaChrome.style.left = "0";
+});
+
+minimizarChrome.addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".janela").style.display = "none";
+});
+// Janela VScode
+const janelaVscode = document.querySelector(".janela_vscode");
+const vscode = document.querySelector(".vscode");
+const fechaVscode = document.querySelector(".fecha_vscode");
+const maximizarVscode = document.querySelector(".maximizar_vscode");
+const minimizarVscode = document.querySelector(".minimizar_vscode");
+vscode.addEventListener("click", function (e) {
+  e.preventDefault();
+  janelaVscode.style.display = "block";
+});
+
+fechaVscode.addEventListener("click", function (e) {
+  e.preventDefault();
+  janelaVscode.style.display = "none";
+});
+
+janelaVscode.addEventListener("mousedown", function (e) {
+  e.preventDefault();
+  const x = e.clientX - janelaVscode.offsetLeft;
+  const y = e.clientY - janelaVscode.offsetTop;
+  window.addEventListener("mousemove", move);
+  function move(e) {
+    janelaVscode.style.left = e.clientX - x + "px";
+    janelaVscode.style.top = e.clientY - y + "px";
+  }
+  janelaVscode.addEventListener("mouseup", function () {
+    window.removeEventListener("mousemove", move);
   });
 });

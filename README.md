@@ -16,5 +16,6 @@ Baixe um servidor PHP local e instale em sua máquina, após isso clone o projet
 ## Etapas desenvolvidas
 
 - [x] Estilização base da janela
+- [x] Evento de arrastar janela vscode
 - [x] Evento clique botão direito
 - [x] Evento dropUp menu iniciar
