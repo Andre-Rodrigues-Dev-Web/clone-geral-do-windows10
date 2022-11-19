@@ -1,0 +1,196 @@
+// reset
+* {
+  box-sizing: border-box;
+  font-family: arial;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  audio,
+  img,
+  iframe,
+  video {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+  }
+}
+body {
+  overflow: hidden;
+}
+//Menu
+.menu {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .container_windows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &_windows__logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 33px;
+    }
+  }
+  &_windows__search {
+    width: 400px;
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      color: white;
+      &:focus {
+        background-color: #fff;
+        color: #333;
+        font-weight: 600;
+        outline: none;
+      }
+    }
+  }
+  &_windows__icons {
+    width: 100px;
+    ul {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          img {
+            width: 33px;
+          }
+        }
+      }
+    }
+  }
+}
+//Menu com evento do clique direito do mouse
+.menu_right_clique {
+  background-color: #000;
+  display: none;
+  min-height: 220px;
+  position: absolute;
+  left: 10rem;
+  top: 20rem;
+  width: 200px;
+  .links {
+    display: block;
+    li {
+      & > button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        padding: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+//Menu iniciar
+.menu_iniciar {
+  background-color: #262626cc;
+  display: none;
+  min-height: 620px;
+  position: absolute;
+  left: 0px;
+  bottom: 2.3em;
+  width: 643px;
+  .container_menu {
+    display: flex;
+    .left {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 5%;
+      .container_bars {
+        height: 400px;
+        button {
+          background-color: transparent;
+          border: none;
+          color: #fff;
+          font-size: 20px;
+          padding: 10px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 20%;
+        li {
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .main {
+      padding: 15px 10px;
+      width: 45%;
+      h2 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .programas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        li {
+          &:first-child {
+            a {
+              img {
+                width: 25px;
+              }
+            }
+          }
+          a {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              width: 23px;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 45%;
+    }
+  }
+}
+//sections
+section {
+  min-height: 100vh;
+  position: relative;
+  &.desktop {
+    background-image: url("../img/fundo-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

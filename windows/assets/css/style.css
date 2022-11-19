@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  font-family: arial;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+* a,
+* a:hover {
+  text-decoration: none;
+}
+* li {
+  list-style: none;
+}
+* audio,
+* img,
+* iframe,
+* video {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.menu {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.menu .container_windows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu_windows__logo {
+  display: flex;
+  align-items: center;
+}
+.menu_windows__logo img {
+  width: 33px;
+}
+.menu_windows__search {
+  width: 400px;
+}
+.menu_windows__search input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+}
+.menu_windows__search input:focus {
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+  outline: none;
+}
+.menu_windows__icons {
+  width: 100px;
+}
+.menu_windows__icons ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.menu_windows__icons ul li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.menu_windows__icons ul li a img {
+  width: 33px;
+}
+
+.menu_right_clique {
+  background-color: #000;
+  display: none;
+  min-height: 220px;
+  position: absolute;
+  left: 10rem;
+  top: 20rem;
+  width: 200px;
+}
+.menu_right_clique .links {
+  display: block;
+}
+.menu_right_clique .links li > button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px;
+}
+.menu_right_clique .links li > button:focus {
+  outline: none;
+}
+
+.menu_iniciar {
+  background-color: rgba(38, 38, 38, 0.8);
+  display: none;
+  min-height: 620px;
+  position: absolute;
+  left: 0px;
+  bottom: 2.3em;
+  width: 643px;
+}
+.menu_iniciar .container_menu {
+  display: flex;
+}
+.menu_iniciar .container_menu .left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 5%;
+}
+.menu_iniciar .container_menu .left .container_bars {
+  height: 400px;
+}
+.menu_iniciar .container_menu .left .container_bars button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+}
+.menu_iniciar .container_menu .left .container_bars button:focus {
+  outline: none;
+}
+.menu_iniciar .container_menu .left .actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 20%;
+}
+.menu_iniciar .container_menu .left .actions li a {
+  color: #fff;
+}
+.menu_iniciar .container_menu .main {
+  padding: 15px 10px;
+  width: 45%;
+}
+.menu_iniciar .container_menu .main h2 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.menu_iniciar .container_menu .main .programas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.menu_iniciar .container_menu .main .programas li:first-child a img {
+  width: 25px;
+}
+.menu_iniciar .container_menu .main .programas li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu_iniciar .container_menu .main .programas li a img {
+  width: 23px;
+}
+.menu_iniciar .container_menu .right {
+  width: 45%;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+}
+section.desktop {
+  background-image: url("../img/fundo-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */
