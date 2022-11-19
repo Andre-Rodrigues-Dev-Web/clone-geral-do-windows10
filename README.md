@@ -15,6 +15,6 @@ Baixe um servidor PHP local e instale em sua máquina, após isso clone o projet
 
 ## Etapas desenvolvidas
 
-- [ ] Estilização base da janela
-- [ ] Evento clique botão direito
-- [ ] Evento dropUp menu iniciar
+- [x] Estilização base da janela
+- [x] Evento clique botão direito
+- [x] Evento dropUp menu iniciar
