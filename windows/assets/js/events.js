@@ -1,6 +1,36 @@
-// Eventos de click botão direit
+//QuerySelectors
+const iconsDesk = document.querySelector(".icon_rename");
+const draggableIcon = document.querySelector(".draggableIcon");
 const container = document.querySelector(".container");
 const clickRight = document.querySelector(".menu_right_clique");
+const menuIniciar = document.querySelector(".menu_windows__logo");
+const openMenu = document.querySelector(".menu_iniciar");
+const chrome = document.querySelector(".chrome");
+const fechaChrome = document.querySelector(".fecha_chrome");
+const maximizarChrome = document.querySelector(".maximizar_chrome");
+const minimizarChrome = document.querySelector(".minimizar_chrome");
+const janelaChrome = document.querySelector(".janela");
+const janelaVscode = document.querySelector(".janela_vscode");
+const vscode = document.querySelector(".vscode");
+const fechaVscode = document.querySelector(".fecha_vscode");
+const maximizarVscode = document.querySelector(".maximizar_vscode");
+const minimizarVscode = document.querySelector(".minimizar_vscode");
+
+// Load site
+const i = setInterval(function () {
+  clearInterval(i);
+  // O código desejado é apenas isto:
+  document.getElementById("load").style.display = "none";
+  document.querySelector("section").style.display = "block";
+}, 8000);
+
+//Eventos dos icones
+iconsDesk.addEventListener("click", function () {
+  document.querySelector(".icon_rename span").contentEditable = "true";
+});
+
+
+// Eventos de click botão direito
 container.addEventListener("contextmenu", function (e) {
   e.preventDefault();
   clickRight.style.display = "block";
@@ -44,9 +74,6 @@ items.forEach((item) => {
   `;
 });
 //Menu iniciar
-const menuIniciar = document.querySelector(".menu_windows__logo");
-const openMenu = document.querySelector(".menu_iniciar");
-
 menuIniciar.addEventListener("click", function (e) {
   e.preventDefault();
   openMenu.style.display = "block";
@@ -57,11 +84,6 @@ menuIniciar.addEventListener("click", function (e) {
   });
 });
 //Eventos Janela Chrome
-const chrome = document.querySelector(".chrome");
-const fechaChrome = document.querySelector(".fecha_chrome");
-const maximizarChrome = document.querySelector(".maximizar_chrome");
-const minimizarChrome = document.querySelector(".minimizar_chrome");
-const janelaChrome = document.querySelector(".janela");
 
 chrome.addEventListener("click", function (e) {
   e.preventDefault();
@@ -86,11 +108,6 @@ minimizarChrome.addEventListener("click", function (e) {
   document.querySelector(".janela").style.display = "none";
 });
 // Janela VScode
-const janelaVscode = document.querySelector(".janela_vscode");
-const vscode = document.querySelector(".vscode");
-const fechaVscode = document.querySelector(".fecha_vscode");
-const maximizarVscode = document.querySelector(".maximizar_vscode");
-const minimizarVscode = document.querySelector(".minimizar_vscode");
 vscode.addEventListener("click", function (e) {
   e.preventDefault();
   janelaVscode.style.display = "block";

@@ -22,7 +22,25 @@
 </head>
 
 <body>
+    <div class="loading" id="load">
+        <div class="container_load">
+            <img src="assets/img/icons/icon_windows.png" alt="windows_load" class="windows_icon">
+            <img src="assets/img/load.gif" style="width:150px;height:150px;" />
+        </div>
+    </div>
     <section class="desktop container">
+        <div class="area">
+            <button class="icons_area lixeira">
+                <img src="assets/img/icons/lixeira-vazia.png" alt="">
+                <span>Lixeira</span>
+            </button>
+            <div class="draggableIcon">
+                <button class="icons_area icon_rename">
+                    <img src="assets/img/icons/lixeira-vazia.png" alt="">
+                    <span>Lixeira</span>
+                </button>
+            </div>
+        </div>
         <?php include "includes/clickRight.php"; ?>
         <!--/menu-com-clique-direito-do-mouse-->
         <?php include "includes/menuBottom.php"; ?>

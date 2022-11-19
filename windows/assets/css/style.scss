@@ -1,3 +1,6 @@
+//Vars
+// import vars
+@import "vars";
 // reset
 * {
   box-sizing: border-box;
@@ -23,6 +26,31 @@
 }
 body {
   overflow: hidden;
+}
+//Botoes
+.draggableIcon{
+  width: 100px;
+}
+.icons_area {
+  background-color: transparent;
+  border: none;
+  cursor: context-menu;
+  width: 90px;
+  &:focus {
+    outline: none;
+  }
+  img {
+    width: 70%;
+  }
+  span {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+}
+.lixeira {
 }
 //Menu
 .menu {
@@ -239,6 +267,24 @@ body {
     }
   }
 }
+//Loading
+.loading {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  .container_load {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .windows_icon {
+      margin-bottom: 5em;
+      width: 100px;
+    }
+  }
+}
 // Janelas
 //Janela Chrome
 .janela {
@@ -298,7 +344,7 @@ body {
 }
 //Janela VSCode
 .janela_vscode {
-  background-color: #262728;
+  background-color: var(--vscode-activityBar-background);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.29);
   display: none;
   height: 780px;
@@ -399,6 +445,7 @@ body {
 }
 //sections
 section {
+  display: none;
   min-height: 100vh;
   position: relative;
   &.desktop {
@@ -406,5 +453,9 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  & > .area {
+    height: 844px;
+    padding: 1em;
   }
 }
