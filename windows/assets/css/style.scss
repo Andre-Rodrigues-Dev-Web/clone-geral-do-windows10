@@ -28,13 +28,14 @@ body {
   overflow: hidden;
 }
 //Botoes
-.draggableIcon{
+.draggableIcon {
   width: 100px;
 }
 .icons_area {
   background-color: transparent;
   border: none;
   cursor: context-menu;
+  margin-top: 10px;
   width: 90px;
   &:focus {
     outline: none;

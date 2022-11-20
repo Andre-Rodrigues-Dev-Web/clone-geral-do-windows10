@@ -36,8 +36,8 @@
             </button>
             <div class="draggableIcon">
                 <button class="icons_area icon_rename">
-                    <img src="assets/img/icons/lixeira-vazia.png" alt="">
-                    <span>Lixeira</span>
+                    <img src="assets/img/icons/meus-documentos.png" alt="">
+                    <span>Meus Documentos</span>
                 </button>
             </div>
         </div>
